@@ -23,8 +23,10 @@ When you right-click the VS Code icon in your taskbar, you can also pin a folder
 | German - Code Spell Checker | `streetsidesoftware.code-spell-checker-german` | German dictionary extension for VS Code | streetsidesoftware |
 | Markdown All in One | `yzhang.markdown-all-in-one` | All you need to write Markdown (keyboard shortcuts, table of contents, auto preview and more) | Yu Zhang |
 | Markdown Preview Enhanced | `shd101wyy.markdown-preview-enhanced` | Markdown Preview Enhanced ported to vscode | Yiyi Wang |
+| markdownlint | `davidanson.vscode-markdownlint` | Markdown linting and style checking | David Anson |
 | Prettier - Code formatter | `esbenp.prettier-vscode` | Code formatter using prettier | Prettier |
 | YAML | `redhat.vscode-yaml` | YAML Language Support, used to validate the YAML frontmatter in a skill's `SKILL.md` | Red Hat |
+| GitLens | `eamodio.gitlens` | Supercharges Git within VS Code — blame annotations, history, and more | GitKraken |
 
 > **Pro-tip**
 >
@@ -40,8 +42,10 @@ To make sure everyone who opens this project gets prompted to install the extens
     "streetsidesoftware.code-spell-checker-german",
     "yzhang.markdown-all-in-one",
     "shd101wyy.markdown-preview-enhanced",
+    "davidanson.vscode-markdownlint",
     "esbenp.prettier-vscode",
-    "redhat.vscode-yaml"
+    "redhat.vscode-yaml",
+    "eamodio.gitlens"
   ]
 }
 ```
@@ -71,7 +75,7 @@ When you have the Claude Code terminal open, you can also install the skill-crea
 when the plugin is installed, you can use the following command to call the skill-creator skill:
 
 ```bash
-/skill-creator 
+/skill-creator
 ```
 
 ## Anatomy of a Skill
@@ -135,7 +139,7 @@ To open Markdown files in text editor mode, you need to right-click the file and
 
 ## Terminal
 
-VS Code has an integrated terminal that you can use to run command-line tools without leaving the editor. To open the terminal, go to `View > Terminal` or press Ctrl + SHIFT + `ö`
+VS Code has an integrated terminal that you can use to run command-line tools without leaving the editor. To open the terminal, go to `View > Terminal` or press `` Ctrl+Shift+` `` (on a German keyboard layout this key is labeled `ö`; on a US layout it's the backtick/tilde key).
 
 To change the keyboard shortcut for the Terminal: create new Terminal, go to `File > Preferences > Keyboard Shortcuts` and search for "Terminal: Create New Terminal" or `(workbench.action.terminal.new)`. You can then change the keybinding to your preferred combination.
 
@@ -200,6 +204,7 @@ When writing Markdown files, you may encounter issues with formatting or renderi
 ```json
 {
   "default": true,
-  "MD012": false
+  "MD012": false,
+  "MD013": false
 }
 ```
