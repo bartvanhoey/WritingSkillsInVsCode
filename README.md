@@ -125,6 +125,19 @@ You can add a VS Code user snippet so typing a short prefix inserts the frontmat
 
 Now, in any Markdown file, typing `skillfront` and pressing Tab will expand into the snippet above, with your cursor jumping between the placeholders.
 
+
+## Claude API Prompt Audit
+
+The claude-api prompt-audit is a subcommand of the bundled claude-api skill in Claude Code.
+
+What it does. It audits prompts, skills, and tool descriptions for "cruft": instructions written for older Claude models that current models no longer need. The premise is that old prompts are full of pressure language, step-by-step scripts, and format scaffolds added because an older model under-triggered or planned poorly. Current models follow instructions more literally, so that leftover text now causes over-triggering and rigid behavior.
+
+The goal is removing specific dated instructions, not making prompts shorter.
+
+```bash
+/claude-api prompt-audit
+```
+
 ## Markdown Preview mode by default
 
 To open Markdown files in preview mode by default (instead of the raw editor), add a workspace or user setting that associates .md files with the preview editor. Open Settings (JSON) via the Command Palette → "Preferences: Open User Settings (JSON)" and add:
